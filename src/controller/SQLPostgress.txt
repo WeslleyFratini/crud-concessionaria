@@ -1,0 +1,127 @@
+﻿/*drop tables*/
+
+drop table if exists empresa;
+drop table if exists funcionarios;
+drop table if exists veiculos;
+drop table if exists fornecedores;
+drop table if exists vendas;
+
+/*Create tables*/
+
+/*Table Empresa*/
+
+create table empresa(
+	id serial primary key,
+	nomeEmpre varchar(120),
+	rua varchar (150),
+	cep int,
+	numero int,
+	cidade varchar(120),
+	uf varchar(5)
+
+);
+
+/*Dados empresa*/
+
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Francisca e Aline  ME','Viela Guaraqueçaba',06330070,579,'Carapicuiba','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Evelyn e Yuri Ltda','Travaessa Alfedro Eduarno Noronha',88476005,197,'São Paulo','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Cesár e Aline Locações de Automoveis Ltda','Thais',66657810,125,'Itapevi','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Isadora e Luan Ltda','Presidente Jânio Quadros ',44543015,562,'São Paulo','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Allana E Vera ME','Avenida Monteiro Lobato',14031246,544,'Ribeirão Preto','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Nathan e Nathan Ltda','Pedro Chaves',55027090,772,'São Paulo','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Bento e Marcio Ltda','Alameda Pantaneiro',13324315,366,'Salto','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Fatima e Fabio Ltda','Maria Piedade Ribeiro Alves',88635,282,'Suzano','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Iago e Izabel Ltda','Gabriela Mistral',77853100,782,'Franco da Rocha','SP');
+INSERT INTO empresa(nomeEmpre,rua,cep,numero,cidade,uf) VALUES ('Vinicius e Elaine Ltda','Visconde de Soutelo',13900120,130,'Amparo','SP');
+
+
+/*Table Funcioanrios*/
+
+create table funcionarios(
+	id serial primary key,
+	nomeFunc varchar(120),
+	salario real,
+	cargo varchar(120)
+);
+
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Leila Barros Dias',2000,'Vendedora');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Luana Cardoso Melo',5000,'Vendedora');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Andre Gomes Goncalves',5000,'Vendedor');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Leila Barros Dias',2000,'Vendedora');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Vinicius Araujo Ferreira',10000,'Gerente');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Maria Almeida Rodrigues',10000,'Gerente');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Bruno Cavalcanti Dias',3000,'Vendedor');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Bruna Rodrigues Pinto',4000,'Vendedor');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Isabelle Oliveira Cunha',1000,'Estagiaria');
+INSERT INTO funcionarios(nomeFunc,salario,cargo) VALUES('Matheus Cunha Carvalho',1000,'Estagiario');
+
+
+/*Table Veiculos*/
+
+create table veiculos(
+	id serial primary key,
+	marca varchar(120),
+	modelo varchar(120),
+	cor varchar(120),
+	ano int,
+	preco real 
+);
+
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Dogde','Ram 2500','Bege',2010, 20000);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Acura','Legend','Cinza',1991,1000);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Saab','9000 CD','Branco',1992,500);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Porshe','911 Targa','Branco',1991,15000);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Kia Motors','Besta','Cinza',1992,4999);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Ferrari','Maranello','Verde',2003,499999);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Daihatsu','Charade Sedan','Cinza',1994,3958);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Hafei','Towner Pickup','Prata',2011,8989);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Chevrolet','Spin','Azul',2013,25666);
+INSERT INTO veiculos(marca,modelo,cor,ano,preco) VALUES('Kia Motors','Sportage LX','Laranja',2011,78888);
+
+/*Table Fonecedores*/
+
+create table fornecedores(
+	id serial primary key,
+	nome_forn varchar(120),
+	cnpj varchar(30)
+);
+
+/*Dados Fonecedores*/
+
+INSERT INTO fornecedores(nome_forn,cnpj) VALUES ('Miguel E Cristine Vidros ME','10928388815373');
+INSERT INTO fornecedores(nome_forn,cnpj) VALUES ('Milenea E Giovanne Adega Ltda','42274762955494');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Dainae e Eduardo Entulhos','79767297641374');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Marcelo E levi Telemunicaçoes Ltda','20174993299879');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Benicio E ayla Grafica ME','54788013622164');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Lais e Aparecida Filmagens','99316942198202');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Samuel e Noah Fotografias','55653650062158');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Raimunda E Clara Buffet','37400328312069');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Stefany e Fabiana Comercio de Bebidas','41086285025812');
+INSERT INTO fornecedores(nome,cnpj) VALUES ('Arthur E Ruan Doces & Salgados','87631650101393');
+
+/*Table Vendas*/
+
+create table vendas(
+		id serial primary key,
+		modeloVei varchar (120),
+		quantidade int,
+		preco real,
+		cliente varchar (120)
+);		
+	
+	
+/* Dados Vendas*/	
+
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Ram 2500',2,2000,'Jose');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Ford',2,50000,'Maria');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Volvo',7,5000000,'Marcos');		
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Mercedes',6,90000000.20,'Weslley');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('BMW',6,70000,'Mauro');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Fiat',5,80000,'Elaine');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Citroen',3,30000,'Oswaldo');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Chevrolet',1,2000,'Gabrielli');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Vokswagem',1,2000,'Jairo');
+INSERT INTO vendas(modeloVei,quantidade,preco,cliente) VALUES ('Toyota',8,8523647,'Tatiane');
+
+
+

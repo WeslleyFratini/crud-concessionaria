@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Funcionarios" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77d08efc-169f-4f77-a8fb-c724341f0a87">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * from funcionarios ORDER BY nomefunc]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="nomefunc" class="java.lang.String"/>
+	<field name="salario" class="java.lang.Float"/>
+	<field name="cargo" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="15" width="407" height="34" uuid="0a3dc0c8-b00f-481b-99e1-949d04d978ac"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[IMPORTS RIBEIRÃO AUTOMÔVEIS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="164" y="13" width="196" height="41" uuid="df46f0af-860c-4c03-9cba-c531f69dfd3d"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[FUNCIONÁRIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="55" height="23" uuid="3e524f58-7e36-43e8-bc32-67e5bfe4c41e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="0" width="55" height="23" uuid="3681eec6-a286-49db-b6b7-9d514a77c12a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="0" width="70" height="23" uuid="0e461e32-9643-4dd9-814a-dc38aa22d098"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SALÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="55" height="23" uuid="7dc0d2a7-c2cc-4c96-a6b9-3213840e5866"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[CARGO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="55" height="18" uuid="93b7f586-7199-4859-858c-632d70b20d27"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="0" width="100" height="20" uuid="ffe43287-b9f7-4bc8-ae9a-23cc1bd7e82f"/>
+				<textFieldExpression><![CDATA[$F{nomefunc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="100" height="20" uuid="d60bc5d0-85c6-448a-b179-37f9e3c7c848"/>
+				<textFieldExpression><![CDATA[$F{cargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="100" height="20" uuid="1931f1d8-c5a6-4d98-b70d-9a45a2e6d362"/>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
